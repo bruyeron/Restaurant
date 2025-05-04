@@ -8,7 +8,7 @@
 
 body {
     margin: 0;
-    padding: 0 0 10rem 0;
+    padding: 0;
     box-sizing: border-box;
     color: var(--noir);
     font-family: 'Poppins',sans-serif;
@@ -107,4 +107,138 @@ img {
     background-color: white;
     border: solid 2px var(--orange);
     color: var(--orange);
+}
+
+
+/*feedback*/
+.customer h1 {
+    color: #3D405B;
+    text-align: center;
+}
+
+.customer .pdp {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    
+}
+
+.commentaire {
+    background: var(--cream);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 4rem 5rem;
+    padding: 2rem 0;
+
+}
+
+.name {
+    color: #3D405B;
+    font-weight: 700;
+    font-size: 21px;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer {
+    background: var(--noir);
+    padding: 40px 20px;
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 2rem;
+}
+
+.footTitle {
+    color: var(--orange);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.descriFoot {
+    color: var(--cream);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer ul li a:hover {
+    color: var(--orange);
+}
+
+footer hr {
+    border: none;
+    height: 1px;
+    background-color: #ffffff50; 
+    margin: 30px auto;
+    width: 80%;
+}
+
+.icon {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.icon i {
+    color: white;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon i:hover {
+    color: var(--orange);
+}
+
+.security {
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 10px;
 }
