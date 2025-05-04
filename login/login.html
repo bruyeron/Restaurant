@@ -1,23 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resto | Login</title>
+    <title>Connexion - Mon Application</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <form action="#">
-        <label for="#">Email:
-            <input type="email" name="email" id="email" placeholder="ex . users@gmail.com">
-        </label>
-        <label for="#">Mot de passe:
-            <input type="password" name="password" id="password" placeholder="Entre votre mot de passe">
-        </label>
-        <a href="#">Mot de passe oublié ?</a>
-        <div class="bouton">
-            <button>Log In</button>
-            <button>Sign Up</button>
+    <div class="container">
+        <div class="header">
+            <h1>Pizza 67</h1>
         </div>
-    </form>
+
+        <div class="form-container">
+            <h2>Connexion</h2>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Adresse Email</label>
+                    <div class="input-wrapper">
+                        <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input type="email" id="email" class="input-field" placeholder="Entrez votre email" required>
+                    </div>
+                </div>
+
+                <div class="form-group" style="">
+                    <label for="password">Mot de Passe</label>
+                    <div class="input-wrapper">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <input type="password" id="password" class="input-field" placeholder="Entrez votre mot de passe" required>
+                        <div class="password-toggle" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-login">Se Connecter</button>
+
+                <button type="button" class="btn btn-signup">S'inscrire</button>
+
+                <div class="forgot-password">
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Pizza 67. Tous droits réservés.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                
+                const icon = this.querySelector('i');
+                icon.classList.toggle('fa-eye');
+                icon.classList.toggle('fa-eye-slash');
+            });
+            
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                console.log('Email:', email, 'Password:', password);
+            });
+        });
+    </script>
 </body>
 </html>
