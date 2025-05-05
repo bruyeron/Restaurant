@@ -6,6 +6,7 @@
     <title>Connexion - Mon Application</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,6 +16,10 @@
 
         <div class="background">
             <img src="/images/pizza.png" alt="images d'une pizza">
+        </div>
+
+        <div class="bg">
+            <img src="/images/peperonni.png" alt="">
         </div>
 
         <div class="form-container">
@@ -31,7 +36,7 @@
                     </div>
                 </div>
 
-                <div class="form-group" style="">
+                <div class="form-group">
                     <label for="password">Mot de Passe</label>
                     <div class="input-wrapper">
                         <div class="input-icon">
@@ -58,28 +63,5 @@
             <p>© 2025 Pizza 67. Tous droits réservés.</p>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const togglePassword = document.getElementById('togglePassword');
-            const passwordInput = document.getElementById('password');
-            
-            togglePassword.addEventListener('click', function() {
-                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                passwordInput.setAttribute('type', type);
-                
-                const icon = this.querySelector('i');
-                icon.classList.toggle('fa-eye');
-                icon.classList.toggle('fa-eye-slash');
-            });
-            
-            document.getElementById('loginForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                console.log('Email:', email, 'Password:', password);
-            });
-        });
-    </script>
 </body>
 </html>

@@ -23,6 +23,7 @@
 
     <section class="container">
         <div class="content">
+            
             <p class="title">Artisan Pizzas Crafted with Passion</p>
             <p class="description">
                 Experience authentic Italian with our wood-fired pizzas made from locally-sourced ingredients
@@ -102,5 +103,15 @@
         </div>
         <p class="security"> @2025 Pizza 67, All rights reserved</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const loggedIn = localStorage.getItem('loggedIn');
+
+        if (!loggedIn) {
+            window.location.href = "login/login.html";
+        }
+    });
+
+    </script>
 </body>
 </html>
